@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="城市：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GLR-ns-KX0">
+                                <rect key="frame" x="51" y="130" width="69" height="28"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="省：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pbm-jJ-GXm">
+                                <rect key="frame" x="74" y="87" width="46" height="28"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="部落天气预报" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IUA-bm-ckF">
+                                <rect key="frame" x="91" y="40" width="138" height="28"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SRr-xs-qwY">
+                                <rect key="frame" x="200" y="87" width="120" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="pSi-Q2-il2"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sah-ch-aac">
+                                <rect key="frame" x="200" y="130" width="120" height="28"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gcp-oo-KLH">
+                                <rect key="frame" x="0.0" y="352" width="320" height="216"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="Fbj-vj-MLK"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="06U-Xb-OHa"/>
+                                </connections>
+                            </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" text="请选择查询的城市" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XiF-16-lfV">
+                                <rect key="frame" x="80" y="232" width="160" height="112"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3AP-C2-yoi">
+                                <rect key="frame" x="100" y="178" width="120" height="34"/>
+                                <color key="backgroundColor" red="0.0" green="0.50196081399917603" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="2x6-99-nfp"/>
+                                </constraints>
+                                <state key="normal" title="查询">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="check" destination="BYZ-38-t0r" eventType="touchUpInside" id="CVv-ds-Ces"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="SRr-xs-qwY" firstAttribute="top" secondItem="Pbm-jJ-GXm" secondAttribute="top" id="4Eb-y2-XhJ"/>
+                            <constraint firstItem="IUA-bm-ckF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7Xv-HC-lGA"/>
+                            <constraint firstItem="Sah-ch-aac" firstAttribute="top" secondItem="GLR-ns-KX0" secondAttribute="top" id="9NF-np-NBL"/>
+                            <constraint firstItem="gcp-oo-KLH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Aqn-fx-WcU"/>
+                            <constraint firstItem="3AP-C2-yoi" firstAttribute="top" secondItem="Sah-ch-aac" secondAttribute="bottom" constant="20" id="Ekg-b0-zT5"/>
+                            <constraint firstItem="GLR-ns-KX0" firstAttribute="top" secondItem="Pbm-jJ-GXm" secondAttribute="bottom" constant="15" id="IOC-hJ-EN3"/>
+                            <constraint firstItem="Pbm-jJ-GXm" firstAttribute="trailing" secondItem="GLR-ns-KX0" secondAttribute="trailing" id="JVM-JC-oB8"/>
+                            <constraint firstItem="SRr-xs-qwY" firstAttribute="leading" secondItem="Pbm-jJ-GXm" secondAttribute="trailing" constant="80" id="KC1-ss-sBg"/>
+                            <constraint firstItem="GLR-ns-KX0" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-40" id="Rtt-Ae-AC8"/>
+                            <constraint firstAttribute="trailing" secondItem="gcp-oo-KLH" secondAttribute="trailing" id="SVL-My-lhX"/>
+                            <constraint firstItem="Pbm-jJ-GXm" firstAttribute="top" secondItem="IUA-bm-ckF" secondAttribute="bottom" constant="19" id="Wj2-RV-yT2"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="gcp-oo-KLH" secondAttribute="bottom" id="XAb-vN-UMY"/>
+                            <constraint firstItem="Sah-ch-aac" firstAttribute="width" secondItem="SRr-xs-qwY" secondAttribute="width" id="ZLU-FW-wkU"/>
+                            <constraint firstItem="XiF-16-lfV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dQM-RQ-IA5"/>
+                            <constraint firstItem="IUA-bm-ckF" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="jXv-at-4eG"/>
+                            <constraint firstItem="XiF-16-lfV" firstAttribute="top" secondItem="3AP-C2-yoi" secondAttribute="bottom" constant="20" id="nNc-xI-N8t"/>
+                            <constraint firstItem="Sah-ch-aac" firstAttribute="leading" secondItem="SRr-xs-qwY" secondAttribute="leading" id="njz-Zp-sL4"/>
+                            <constraint firstItem="gcp-oo-KLH" firstAttribute="top" secondItem="XiF-16-lfV" secondAttribute="bottom" constant="8" id="otx-hr-xbe"/>
+                            <constraint firstItem="3AP-C2-yoi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yeW-X3-2q1"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cityLabel" destination="Sah-ch-aac" id="UnT-el-1fW"/>
+                        <outlet property="pickerView" destination="gcp-oo-KLH" id="xlS-D2-ujX"/>
+                        <outlet property="provinceLabel" destination="SRr-xs-qwY" id="JMY-I3-qfe"/>
+                        <outlet property="showLabel" destination="XiF-16-lfV" id="iQC-Yn-AZz"/>
+                        <outlet property="weatherLabel" destination="XiF-16-lfV" id="ngo-JT-Svt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="290" y="319"/>
+        </scene>
+    </scenes>
+</document>
