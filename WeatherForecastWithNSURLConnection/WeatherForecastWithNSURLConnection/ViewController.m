@@ -27,6 +27,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+//    NSArray * arr = @[@2];
+//    NSLog(@"%@",arr[1]);
 
     self.provinceLabel.text = [self.cities[0] name];
     self.cityLabel.text = [self.cities[0] cities][0];
@@ -107,6 +109,7 @@
 - (void)checkInBackground {
     
     NSString * numStr = nil;
+    
     if(self.weatherNumDict[self.cityLabel.text]) {
         numStr = self.weatherNumDict[self.cityLabel.text];
     }else if(self.weatherNumDict[[self.cityLabel.text substringToIndex:self.cityLabel.text.length-1]]) {
@@ -120,10 +123,12 @@
     
     NSURL * url = [NSURL URLWithString:checkStr];
     NSURLRequest * request = [NSURLRequest requestWithURL:url];
-    [NSURLConnection sendAsynchronousRequest:request queue:[[NSOperationQueue alloc]init] completionHandler:^(NSURLResponse * _Nullable response, NSData * _Nullable data, NSError * _Nullable connectionError) {
+    __weak typeof(self) weakSelf = self;
+    
+    [NSURLConnection sendAsynchronousRequest:request queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse * _Nullable response, NSData * _Nullable data, NSError * _Nullable connectionError) {
         
         if (data == nil) {
-            self.showLabel.text = @"暂无该地区天气信息，请选择其他城市";
+            weakSelf.showLabel.text = @"暂无该地区天气信息，请选择其他城市";
             return ;
         }
     
@@ -138,11 +143,37 @@
         
         NSString * text = [NSString stringWithFormat:@"%@\n%@\n%@\n%@\n%@",temp,weatherType,wind,windForce,tempRange];
         
-        self.showLabel.text = text;
-        
-        NSLog(@"%@",dict);
+        weakSelf.showLabel.text = text;
+
         
     }];
+    
+//    [[[NSURLSession sharedSession]dataTaskWithURL:url completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+//        
+//        if (data == nil) {
+//            self.showLabel.text = @"暂无该地区天气信息，请选择其他城市";
+//            return ;
+//        }
+//        
+//        NSDictionary * dict = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
+//        NSArray * forecast = dict[@"data"][@"forecast"];
+//        
+//        NSString * temp =[NSString stringWithFormat:@"现时温度：%@°C",dict[@"data"][@"wendu"]];
+//        NSString * weatherType =[NSString stringWithFormat:@"天气类型：%@°",forecast[0][@"type"]];
+//        NSString * wind =[NSString stringWithFormat:@"风向：%@",forecast[0][@"fengxiang"]];
+//        NSString * windForce =[NSString stringWithFormat:@"风力：%@",forecast[0][@"fengli"]];
+//        NSString * tempRange =[NSString stringWithFormat:@"%@ ~ %@°",forecast[0][@"low"],forecast[0][@"high"]];
+//        
+//        NSString * text = [NSString stringWithFormat:@"%@\n%@\n%@\n%@\n%@",temp,weatherType,wind,windForce,tempRange];
+//        
+//        self.showLabel.text = text;
+//        
+//        NSLog(@"%@",dict);
+//        NSLog(@"%@",text);
+//        
+//        NSLog(@"%@",response);
+//        
+//    }]resume];
 
 }
 

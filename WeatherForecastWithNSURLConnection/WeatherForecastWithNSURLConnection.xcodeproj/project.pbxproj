@@ -16,6 +16,7 @@
 		2E07A0411C620FB600B1A0C6 /* WeatherNum.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2E07A03F1C620FB600B1A0C6 /* WeatherNum.txt */; settings = {ASSET_TAGS = (); }; };
 		2E07A0461C620FE800B1A0C6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E07A0441C620FE800B1A0C6 /* Main.storyboard */; settings = {ASSET_TAGS = (); }; };
 		2E07A0481C6210B400B1A0C6 /* cities.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2E07A0471C6210B400B1A0C6 /* cities.plist */; settings = {ASSET_TAGS = (); }; };
+		2EFCD8D91C755ABD000D3465 /* NSObject+LYHLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EFCD8D81C755ABD000D3465 /* NSObject+LYHLog.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,8 @@
 		2E07A03F1C620FB600B1A0C6 /* WeatherNum.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = WeatherNum.txt; sourceTree = "<group>"; };
 		2E07A0451C620FE800B1A0C6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2E07A0471C6210B400B1A0C6 /* cities.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = cities.plist; sourceTree = "<group>"; };
+		2EFCD8D71C755ABD000D3465 /* NSObject+LYHLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+LYHLog.h"; sourceTree = "<group>"; };
+		2EFCD8D81C755ABD000D3465 /* NSObject+LYHLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+LYHLog.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +68,8 @@
 		2E07A0221C620F7500B1A0C6 /* WeatherForecastWithNSURLConnection */ = {
 			isa = PBXGroup;
 			children = (
+				2EFCD8D71C755ABD000D3465 /* NSObject+LYHLog.h */,
+				2EFCD8D81C755ABD000D3465 /* NSObject+LYHLog.m */,
 				2E07A0261C620F7500B1A0C6 /* AppDelegate.h */,
 				2E07A0271C620F7500B1A0C6 /* AppDelegate.m */,
 				2E07A03A1C620FA400B1A0C6 /* ViewController.h */,
@@ -166,6 +171,7 @@
 				2E07A0281C620F7500B1A0C6 /* AppDelegate.m in Sources */,
 				2E07A0401C620FB600B1A0C6 /* City.m in Sources */,
 				2E07A0251C620F7500B1A0C6 /* main.m in Sources */,
+				2EFCD8D91C755ABD000D3465 /* NSObject+LYHLog.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -312,6 +318,7 @@
 				2E07A0391C620F7500B1A0C6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

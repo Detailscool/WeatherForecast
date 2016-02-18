@@ -14,9 +14,19 @@
 
 @implementation AppDelegate
 
+void static UncaughtExceptionHandler(NSException * exception) {
+    
+    [[NSRunLoop currentRunLoop] addPort:[NSPort port] forMode:NSDefaultRunLoopMode];
+    [[NSRunLoop currentRunLoop]run];
+    NSLog(@"%@",exception);
+    
+}
+
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+//    NSSetUncaughtExceptionHandler(UncaughtExceptionHandler);
+    
     return YES;
 }
 
